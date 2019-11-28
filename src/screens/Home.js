@@ -20,6 +20,7 @@ class Home extends Component {
       <div className="main-container">
         <h1>Home</h1>
         <Canvas />
+        asdasd
 
       </div>
     )
