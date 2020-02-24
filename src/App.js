@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Switch, Route, Link } from "react-router-dom";
+import { HashRouter as Router,Switch, Route, Link } from "react-router-dom";
 
 
 import './styles/App.css';
@@ -15,12 +15,16 @@ class App extends Component {
       <div className="App">
 
         {/* <Menu /> */}
-        <Switch>
-          <Route exact path="/" component={Home}/>
-          <Route path="/about" component={About} />
-          <Route path="/projects" component={Projects} />
-          <Route component={Home} />
-        </Switch>
+
+        <Router>
+          
+          <Switch>
+            <Route exact path="/" component={Home}/>
+            <Route path="/about" component={About} />
+            <Route path="/projects" component={Projects} />
+            <Route component={Home} />
+          </Switch>
+        </Router
 
       </div>
     );
