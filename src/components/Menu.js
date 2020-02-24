@@ -6,7 +6,7 @@ import '../styles/main.css';
 class Menu extends Component {
   render() {
     return (
-      <div className="">
+      <div className="menu-container">
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
         <Link to="/projects">Projects</Link>
