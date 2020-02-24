@@ -11,8 +11,8 @@ class ExperienceModal extends Component {
                         onClick={this.props.closeModal}
                     />
                     <div className='experience-modal'>
+                    
 
-                        
                     </div>
 
                 </div>

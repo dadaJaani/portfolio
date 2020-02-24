@@ -164,7 +164,7 @@ class Home extends Component {
         <h3>Detailed Resume</h3>
 
         <div className='skills-container'>
-          <Link to={resume} target="_blank"><IoIosDocument/><label>Resume</label></Link>
+          <a href={resume} target="_blank"><IoIosDocument/><label>Resume</label></a>
         </div>
 
 
