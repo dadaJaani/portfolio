@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import '../styles/main.css';
 import Canvas from '../components/Canvas'
 import Anime, {anime} from 'react-anime';
-import { Switch, Route, Link } from "react-router-dom";
 
 import { FaAngular, FaJava, FaReact, FaNode, FaAws } from "react-icons/fa";
 import { IoLogoJavascript, IoIosDocument } from "react-icons/io";
@@ -65,8 +64,8 @@ class Home extends Component {
 
         <div className='home-section'>
           <span>
-            <h2>Waqas Rehmani.</h2>
-            <h1><b>Software Engineer.</b></h1>
+            <h2>Waqas Rehmani</h2>
+            <h1><b>software engineer.</b></h1>
           </span>
           
         </div>
