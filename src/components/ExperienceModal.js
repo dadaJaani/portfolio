@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import { IoIosCloseCircle } from 'react-icons/io'
+
 class ExperienceModal extends Component {
 
     render () {
@@ -11,7 +13,7 @@ class ExperienceModal extends Component {
                         onClick={this.props.closeModal}
                     />
                     <div className='experience-modal'>
-                    
+                        <IoIosCloseCircle />
 
                     </div>
 
