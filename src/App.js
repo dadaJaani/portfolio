@@ -16,15 +16,13 @@ class App extends Component {
 
         {/* <Menu /> */}
 
-        <Router>
-
-          <Switch>
-            <Route exact path="/" component={Home}/>
+        <Home />
+          
+            {/* <Route exact path="/" component={Home}/>
             <Route path="/about" component={About} />
             <Route path="/projects" component={Projects} />
-            <Route component={Home} />
-          </Switch>
-        </Router>
+            <Route component={Home} /> */}
+          
 
       </div>
     );
