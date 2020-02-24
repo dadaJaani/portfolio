@@ -1,7 +1,6 @@
 {
   "name": "wrportfolio",
   "version": "0.1.0",
-  "homepage": "wrehmani.com",
   "private": true,
   "dependencies": {
     "react": "^16.7.0",
