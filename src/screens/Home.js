@@ -163,7 +163,7 @@ class Home extends Component {
         <h3>Detailed Resume</h3>
 
         <div className='skills-container'>
-          <a href='./public/resume/CV.pdf' target="_blank"><IoIosDocument/><label>Resume</label></a>
+          <a href='./resume/CV.pdf' target="_blank"><IoIosDocument/><label>Resume</label></a>
         </div>
 
 
