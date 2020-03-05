@@ -1,10 +1,65 @@
 [
     {
+        "id": 0,
+        "title": "Track Arts Website",
+        "subtitle": "Website For My Startup",
+        "description": "An artist polio website.",
+        "details": "Track Arts is a production house in Pakistan. It is also a platform for emerging artists. We produce and distribute all kinds of performing arts: Music, Videos (vlogs), Poetry, Dance, Storytelling and instrumental music. This website gives the artists a sense of achievement that they are being put out there and has increased our business.",
+        "link": "https://trackarts.com.pk",
+        "stack": ["React", "AWS Lambda", "AWS API Gateway", "AWS DynamoDB", "AWS S3 Bucket"]
+    },
+    {
         "id": 1,
         "title": "CoachingMate Social Website",
-        "subtitle": "Masters Software Engineering Process",
-        "description": "A social media website for athletes and fitness freaks.",
-        "details": "Users can sign up as general users OR coaches/trainers. The general users can be athletes or casual users just looking for fitness motivation. The users who signed up as ",
+        "subtitle": "Masters Software Engineering Project",
+        "description": "A social media website for athletes and fitness enthusiasts.",
+        "details": "Our client, Tri-Alliance, wanted us to build this applicaiton. Users can sign up as general users OR coaches/trainers. The general users can be athletes or casual users just looking for fitness motivation. The users who signed up as coaches need to give proof of their certification as a coach. The coaches can then guide other users. Events and groups can also be made in this software. Users can also upload photos as posts.",
+        "link": "",
         "stack": ["React", "ExpressJS", "NodeJS", "MongoDB", "AWS S3 Bucket"]
+    },
+    {
+        "id": 2,
+        "title": "Wholesale Delivery App",
+        "subtitle": "Freelance Project",
+        "description": "A mobile application used by delivery persons.",
+        "details": "This application was made for an wholesale distribution organization to be used by the business employees only. The delivery people used to go to specific shops to take orders and then used to bring back the lists. Then the order used to be dispatched the next day.\n In this application, the delivery people can select the location of the shop and then the shop's name and then they can select what the shopkeepers are ordering. This data is sent to the head office, which can they keep all the orders ready till the evening, on the same day, to be picked up by the transportation truck. This app helped the business save delivery time.",
+        "link": "",
+        "stack": ["React Native", "AWS Lambda", "AWS API Gateway", "AWS Simple Email Service"]
+    },
+    {
+        "id": 3,
+        "title": "T R E K K",
+        "subtitle": "Catalyst: A C.I.S.S.A. Hackathon",
+        "description": "A mobile application to aid your morning walk.",
+        "details": "The app tells you the best possible path for your morning walk. The user can decide three parameters: the level of people, the level of nature and the level of traffic. If someone wants to have a morning with a high number of people and with lots of nature but zero traffic, the user can select the path suggested by the application. The idea was that the data will be collected using the city of Melbourne's data API. We won the first prize for this.",
+        "link": "https://expo.io/@waqasrehmani/trekk-app",
+        "stack": ["React Native", "Google Maps API"]
+    },
+    {
+        "id": 4,
+        "title": "Cafeco",
+        "subtitle": "Web Information Technologies Project",
+        "description": "A reward based system to promote environment friendliness.",
+        "details": "Two types of users: partners and generals users. Partners are restaurants and cafes that have signed up with us. The users will go to a cafe and when they buy something, a reciept with a code will be given to them. If users redeem that code, they get credits, which they can use for getting free food from the partner eateries. The users then rate the partners based on their eco friendliness. A partner with high eco friendliness will, resultantly, get more customers and more business. A partner who also offers more 'free deals' will get more customers. The partners also have a page where they log in, see reviews, set their free offers and generate the codes.",
+        "link": "https://cafeco-frontend.herokuapp.com",
+        "stack": ["React", "ExpressJS", "NodeJS", "MongoDB"]
+    },
+    {
+        "id": 5,
+        "title": "Healthr",
+        "subtitle": "Software Processes and Management Project",
+        "description": "A health management system when you can book appointments.",
+        "details": "The project was to make an appointment management system for a small clinic. In this project we learned how to manage projects, 'agile' methodologies, software documentation and managing risks related to projects.",
+        "link": "",
+        "stack": ["React", "PHP", "Apache Server", "SQL"]
+    },
+    {
+        "id": 6,
+        "title": "Urbscope",
+        "subtitle": "Senior Year Capstone Project",
+        "description": "A mobile application for tourists.",
+        "details": "A tourist app that identifies famous landmarks and tells the users what to do in a particular place at a particular time based on his/her interests. It has two modes: Discover Mode and Exploration Mode. In Discover Mode, a user takes a picture of landmark and the app tells the user about it. Exploration Mode tells the users about the place they want to go and takes them there using a 3D navigator arrow that was built using WebGL. The project was done in React Native and we used various APIs. Foursquare’s API and Google Maps API was used in Exploration Mode. In Discover Mode, Google’s Cloud Vision API was used to detect the place and then Google’s Knowledge Graph Search API was used to retrieve information on the captured landmark. Furthermore, a recommender system was also made in python that recommends the next place to go, considering the previously visited places.",
+        "link": "https://www.youtube.com/watch?v=Q6BzFtEVTNU",
+        "stack": ["React Native", "ExpressJS", "NodeJS", "Google Maps API", "Google Cloud Vision API", "Foursquare API", "Google Knowledge Graph Search API", "Python", "WebGL"]
     }
 ]

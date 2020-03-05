@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import '../styles/main.css';
 import Canvas from '../components/Canvas'
-import Anime, {anime} from 'react-anime';
+import Anime, { anime } from 'react-anime';
 import projectData from '../utils/projects.json'
 
-import { FaAngular, FaJava, FaReact, FaNode, FaAws } from "react-icons/fa";
+import { FaAngular, FaJava, FaReact, FaNode, FaAws, FaYoutube, FaInstagram, FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { IoLogoJavascript, IoIosDocument } from "react-icons/io";
 import { 
   DiMongodb, 
@@ -22,7 +22,6 @@ import ExperienceModal from '../components/ExperienceModal';
 import logoC from '../assets/icon-c.svg'
 import resume from '../assets/resume/CV1.pdf'
 
-
 import '../styles/main.css';
 
 
@@ -35,7 +34,7 @@ class Home extends Component {
     this.state = {
       width: window.innerWidth,
       height: window.innerHeight,
-      experienceModalVisible: true,
+      experienceModalVisible: false,
       selectedProject: {}
     }
   }
@@ -53,9 +52,37 @@ class Home extends Component {
     })
   }
 
+  nextProject = () => {
+    let thisProject = this.state.selectedProject
+    let nextProject = thisProject;
+    for (var i = 0; i < projectData.length; i++){
+      if (i < projectData.length - 1 && thisProject === projectData[i]) {
+        nextProject = projectData[i+1];
+        break;
+      }
+    }
+    this.setState({
+      selectedProject: nextProject
+    })
+  }
+
+  previousProject = () => {
+    let thisProject = this.state.selectedProject
+    let previousProject = thisProject;
+    for (var i = 1; i < projectData.length; i++){
+      if (i > 0 && thisProject === projectData[i]) {
+        previousProject = projectData[i-1];
+        break;
+      }
+    }
+    this.setState({
+      selectedProject: previousProject
+    })
+  }
+
 
   render() {
-    console.log(this.state);
+    console.log(projectData);
     return (
       <div className="main-container">
         {/* <Canvas /> */}
@@ -63,6 +90,8 @@ class Home extends Component {
           closeModal={this.closeExperienceModal}
           visible={this.state.experienceModalVisible}
           data={this.state.selectedProject}
+          previousProject={this.previousProject}
+          nextProject={this.nextProject}
         />
 
         <div className='home-section'>
@@ -150,6 +179,7 @@ class Home extends Component {
         <br/>
         <h3>Things I have worked on</h3>
 
+        <br/>
 
         <div className='projects-container'>
           {
@@ -162,21 +192,41 @@ class Home extends Component {
               </div>
             )
           }
-          <div 
-            className='projects-item'
-            onClick={this.openExperienceModal}
-          >
-            Coaching Mate Social Website App
-          </div>
         </div>
 
         <br/>
         <br/>
 
-        <h3>Detailed Resume</h3>
+        <hr/>
+
+        <p style={{textAlign:'left', marginBottom: '0'}}>
+          Beyond the realm of computers and science, I also try to compose and make music. Trying to learn to make something even 0.1% close to legends like Hans Zimmer and Ludovico Einaudi. I mostly upload my music to Instagram. Below are the links to my Instagram account and YouTube Channel.
+        </p>
+        <br/>
+        <div className='skills-container'>
+          <Anime 
+            delay={anime.stagger(200)}
+            opacity={[0.1, 1]}
+          >
+            <a href="https://www.youtube.com/channel/UC1LVlNLVzbedzXH3MsIYwdA?view_as=subscriber" target="_blank"><FaYoutube /><label>YouTube</label></a>
+            <a href="https://www.instagram.com/waqasrehmani/" target="_blank"><FaInstagram /><label>Instagram</label></a>
+          </Anime>
+
+        </div>
+        <br/>
+
+        <hr/>
+
+        <br/>
+        <br/>
+
+        <h3>Detailed Resume, GitHub and LinkedIn</h3>
+        <br/>
 
         <div className='skills-container'>
           <a href='./resume/CV.pdf' target="_blank"><IoIosDocument/><label>Resume</label></a>
+          <a href='https://www.linkedin.com/in/waqas-rehmani-8843b3b1/' target="_blank"><FaLinkedinIn /><label>LinkedIn</label></a>
+          <a href='https://github.com/dadaJaani' target="_blank"><FaGithub/><label>GitHub</label></a>
         </div>
 
 
