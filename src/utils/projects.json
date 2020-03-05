@@ -1,0 +1,10 @@
+[
+    {
+        "id": 1,
+        "title": "CoachingMate Social Website",
+        "subtitle": "Masters Software Engineering Process",
+        "description": "A social media website for athletes and fitness freaks.",
+        "details": "Users can sign up as general users OR coaches/trainers. The general users can be athletes or casual users just looking for fitness motivation. The users who signed up as ",
+        "stack": ["React", "ExpressJS", "NodeJS", "MongoDB", "AWS S3 Bucket"]
+    }
+]

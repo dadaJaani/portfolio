@@ -170,20 +170,37 @@ hr{
 }
 
 .projects-item {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  padding: 12px;
+  color: #eee;
+  border-radius: 15px;
   background-color: rgba(255, 255, 255, 0.1);
   transition: all 0.2s;
-
+  width: 150px;
+  height: 150px;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: 'Raleway' ;
+  font-weight: 100;
+  font-size: 12px;
 }
 
 .projects-item:hover {
-  background-color: rgba(255, 255, 255, 0.3);
-
+  background-color: midnightblue; 
+  transform: scale(1.05);
+  font-weight: 200;
 }
 
 
 .experience-modal {
   background-color: #eee;
-  height: 500px;
+  opacity: 0.975;
+  color: #333;
+  height: max-content;
   width: 500px;
   position: fixed;
   top: 0;
@@ -192,8 +209,100 @@ hr{
   bottom: 0;
   margin: auto;
   z-index: 3;
-
+  display: flex;
+  flex-flow: column;
+  align-items: stretch;
   border-radius: 20px;
+  padding: 20px;
+  font-family: 'Raleway';
+}
+
+.close-button-modal {
+  cursor: pointer;
+  position: absolute;
+  opacity: 0.5;
+  left: 0;
+  top: 0;
+  margin: 10px;
+  padding: 5px;
+  color: #000;
+  transition: all 0.2s;
+}
+
+.close-button-modal:hover{
+  opacity: 1;
+  transform: scale(1.8) rotate(90deg);
+  color: rgb(192, 52, 52);
+}
+
+.experience-modal hr {
+  margin: 0;
+  opacity: 0.2;
+}
+
+.experience-modal h3 {
+  color: #333;
+  font-size: 25px;
+  margin: 0 0 20px 0;
+}
+
+.experience-modal h5 {
+  color: #333;
+  /* font-size: 25px; */
+  margin: 20px 0 0 0;
+}
+
+.experience-modal p {
+  color: #333;
+  font-size: 13px;
+  margin: 10px 0;
+}
+
+.experience-modal-menu {
+  padding: 5px 0 0;
+  height: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.experience-modal-menu-button{
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-size: 10px;
+  padding: 0 ;
+  min-width: 20px;
+  border-radius: 20px;
+  max-width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #555;
+  color: #eee;
+  transition: all 0.1s;
+}
+.experience-modal-menu-button:hover{
+  outline: none;
+  background-color: #333;
+}
+
+.experience-modal-menu-button label{
+  cursor: pointer;
+  padding: 0 10px;
+}
+
+.experience-modal-menu-button-disabled {
+  outline: none;
+  border: none;
+  padding: 0 ;
+  min-width: 20px;
+  border-radius: 20px;
+  max-width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #888;
+  color: #eee;
 }
 
 .experience-modal-backdrop {
@@ -208,3 +317,4 @@ hr{
   bottom: 0;
   z-index: 2;
 }
+

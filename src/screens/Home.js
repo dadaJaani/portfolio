@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../styles/main.css';
 import Canvas from '../components/Canvas'
 import Anime, {anime} from 'react-anime';
+import projectData from '../utils/projects.json'
 
 import { FaAngular, FaJava, FaReact, FaNode, FaAws } from "react-icons/fa";
 import { IoLogoJavascript, IoIosDocument } from "react-icons/io";
@@ -34,17 +35,19 @@ class Home extends Component {
     this.state = {
       width: window.innerWidth,
       height: window.innerHeight,
-      experienceModalVisible: false,
+      experienceModalVisible: true,
+      selectedProject: {}
     }
   }
 
-  openModal = () => {
+  openExperienceModal = (item) => {
     this.setState({
-      experienceModalVisible: true
+      experienceModalVisible: true,
+      selectedProject: item
     })
   }
 
-  closeModal = () => {
+  closeExperienceModal = () => {
     this.setState({
       experienceModalVisible: false
     })
@@ -57,9 +60,9 @@ class Home extends Component {
       <div className="main-container">
         {/* <Canvas /> */}
         <ExperienceModal 
-          closeModal={this.closeModal}
+          closeModal={this.closeExperienceModal}
           visible={this.state.experienceModalVisible}
-          data={this.projectData}
+          data={this.state.selectedProject}
         />
 
         <div className='home-section'>
@@ -149,12 +152,22 @@ class Home extends Component {
 
 
         <div className='projects-container'>
+          {
+            projectData.map(item => 
+              <div 
+                className='projects-item'
+                onClick={() => this.openExperienceModal(item)}
+              >
+                {item.title}
+              </div>
+            )
+          }
           <div 
             className='projects-item'
-            onClick={this.openModal}
+            onClick={this.openExperienceModal}
           >
             Coaching Mate Social Website App
-            </div>
+          </div>
         </div>
 
         <br/>
