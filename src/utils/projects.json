@@ -9,7 +9,16 @@
         "stack": ["React", "AWS Lambda", "AWS API Gateway", "AWS DynamoDB", "AWS S3 Bucket"]
     },
     {
-        "id": 1,
+        "id": 42,
+        "title": "2020",
+        "subtitle": "Videogame",
+        "description": "A PC video game Made in the Uni Jam Hackathon in August 2020",
+        "details": "A teddy bear runs to kill deadly virus particles that comes across his way. He uses a mask as a slingshot and shoots sanitizer droplets to kill the virus. I did the coding, UI, music and some of the artwork in this project.",
+        "link": "",
+        "stack": ["Unity", "C#"]
+    },
+    {
+        "id": 12,
         "title": "CoachingMate Social Website",
         "subtitle": "Masters Software Engineering Project",
         "description": "A social media website for athletes and fitness enthusiasts.",

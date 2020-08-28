@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 
-import { IoIosCloseCircle, IoIosArrowBack, IoIosArrowForward } from 'react-icons/io'
+import {IoIosCloseCircle, IoIosArrowBack, IoIosArrowForward} from 'react-icons/io'
 
 const FIRST_ID = 0;
 const LAST_ID = 6;
@@ -8,32 +8,32 @@ const LAST_ID = 6;
 class ExperienceModal extends Component {
 
     handleKeyPress = (event) => {
-        if (event.keyCode === 39){
+        if (event.keyCode === 39) {
             this.props.nextProject();
-        } else if (event.keyCode === 37){
+        } else if (event.keyCode === 37) {
             this.props.previousProject();
         }
     }
 
-    render () {
+    render() {
         console.log('this.props.data', this.props.data)
 
         if (this.props.visible) {
-            return( 
-                <div >
-                    <div 
+            return (
+                <div>
+                    <div
                         className='experience-modal-backdrop'
                         onClick={this.props.closeModal}
                     />
                     <div className='experience-modal' onKeyDown={(e) => this.handleKeyPress(e)} tabIndex='0'>
-                        <IoIosCloseCircle className='close-button-modal' onClick={this.props.closeModal} />
-                        
-                        <div> 
+                        <IoIosCloseCircle className='close-button-modal' onClick={this.props.closeModal}/>
+
+                        <div>
                             <h3>
                                 {this.props.data.title}
                             </h3>
                         </div>
-                        
+
                         <hr/>
 
                         <div>
@@ -45,12 +45,13 @@ class ExperienceModal extends Component {
                         </div>
 
                         {
-                            this.props.data.link !== "" 
-                            ? <a className='experience-modal-link' href={this.props.data.link} target='_blank'>Visit</a>
-                            : null
+                            this.props.data.link !== ""
+                                ? <a className='experience-modal-link' href={this.props.data.link}
+                                     target="_blank" rel="noopener noreferrer" >Visit</a>
+                                : null
                         }
 
-                        <hr/> 
+                        <hr/>
 
                         <h6>Details</h6>
 
@@ -58,17 +59,17 @@ class ExperienceModal extends Component {
                             <p>{this.props.data.details}</p>
                         </div>
 
-                        <hr />
+                        <hr/>
 
                         <h6>Tech Stack</h6>
-                        <div className='experience-modal-stack'> 
-                            
+                        <div className='experience-modal-stack'>
+
                             {this.props.data.stack.map(item => <span>{item}</span>)}
                         </div>
 
-                        <hr />
+                        <hr/>
 
-                        <div className='experience-modal-menu'> 
+                        <div className='experience-modal-menu'>
                             <button
                                 className={this.props.data.id === FIRST_ID ? 'experience-modal-menu-button-disabled' : 'experience-modal-menu-button'}
                                 onClick={this.props.previousProject}
@@ -84,8 +85,6 @@ class ExperienceModal extends Component {
                         </div>
 
 
-                        
-
                     </div>
 
                 </div>
@@ -93,7 +92,7 @@ class ExperienceModal extends Component {
         } else {
             return null
         }
-        
+
     }
 }
 

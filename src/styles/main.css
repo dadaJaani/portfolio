@@ -10,10 +10,11 @@ h1 {
   color: #eeeeee; 
   font-weight: 100;
   margin: 0;
-  font-size: 10.2vw;
+  font-size: 11vw;
   text-align: left;
   font-family: 'Raleway';
   font-weight: 200;
+  display: inline;
 
 }
 
@@ -60,16 +61,28 @@ hr{
   overflow-x: hidden;
 }
 
-
-.home-section {
-  height: 100vh;
-  display: flex;
+.intro {
+  /*height: 100vh;*/
   align-items: center;
+  padding: 13rem 5rem;
+}
+
+.intro p{
+  padding: 0;
+  font-size: 2rem;
+  margin: 1rem 2rem 1rem 0;
+}
+
+.intro-line {
+  display: flex;
+  align-items: flex-end;
 }
 
 .skills-container {
   display: flex;
+  flex-flow: row wrap;
   justify-content: center;
+  padding: 0 5rem;
 }
 
 .skills-container a{
@@ -161,14 +174,18 @@ hr{
 
 
 .projects-container {
-  display: grid;
+  display: flex;
+  flex-flow: row wrap;
   align-self: center;
-  grid-template-columns: repeat(4, 180px);
+  justify-content: center;
+  /*grid-template-columns: repeat(4, 180px);*/
   grid-gap: 10px;
-  grid-template-rows: 180px;
+  padding: 0 5rem;
+  /*grid-template-rows: 180px;*/
 }
 
 .projects-item {
+  width: 180px;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -377,3 +394,7 @@ hr{
   z-index: 2;
 }
 
+
+@media only screen and (max-width: 600px) {
+
+}
